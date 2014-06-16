@@ -1,0 +1,1 @@
+puts "Training ruby on rails"
