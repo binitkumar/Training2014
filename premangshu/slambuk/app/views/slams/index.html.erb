@@ -1,0 +1,32 @@
+<h1>Listing users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Passout year</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @slams.each do |slam| %>
+      <tr>
+        <td><%= slam.name %></td>
+        <td><%= slam.email %></td>
+        <td><%= slam.passyear %></td>
+       <td><%= link_to 'Show', slam %></td>
+        <td><%= link_to 'Edit', edit_slam_path(slam) %></td>
+        <td><%= link_to "Delete", slam, :confirm =>"Are You Sure", :method =>:delete %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'New User', new_slam_path %>
+<br>
+
+

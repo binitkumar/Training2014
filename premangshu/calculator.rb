@@ -1,36 +1,43 @@
 class Calculator
-  def sum(first_number, second_number)
-    begin
-      @len1=first_number.to_s.split(".")[1].length 
+
+def len_cal(first_number,second_number)
+begin
+      len1=first_number.to_s.split(".")[1].length 
     rescue
-      @len1=0
+      len1=0
     end
     begin
-      @len2=second_number.to_s.split(".")[1].length 
+      len2=second_number.to_s.split(".")[1].length 
     rescue
-      @len2=0      
+      len2=0      
     end
-    if @len1>@len2
+    if len1>len2
       (first_number + second_number).round(@len1)
 	  else
       (first_number + second_number).round(@len2)
     end
+
+end
+
+
+  def sum(first_number, second_number)
+    len_cal(
 	end
   
   def sub(first_number, second_number)
     #puts first_number.to_s.split(".").inspect
     
     begin
-      @len1=first_number.to_s.split(".")[1].length 
+      len1=first_number.to_s.split(".")[1].length 
     rescue
-      @len1=0
+      len1=0
     end
     begin
-      @len2=second_number.to_s.split(".")[1].length 
+      len2=second_number.to_s.split(".")[1].length 
     rescue
-      @len2=0      
+      len2=0      
     end
-    if @len1>@len2
+    if len1>len2
       (first_number - second_number).round(@len1)
 	  else
       (first_number - second_number).round(@len2)
@@ -40,16 +47,16 @@ class Calculator
   
   def mul(first_number, second_number)
     begin
-      @len1=first_number.to_s.split(".")[1].length 
+      len1=first_number.to_s.split(".")[1].length 
     rescue
-      @len1=0
+      len1=0
     end
     begin
-      @len2=second_number.to_s.split(".")[1].length 
+      len2=second_number.to_s.split(".")[1].length 
     rescue
-      @len2=0      
+      len2=0      
     end
-    if @len1>@len2
+    if len1>len2
       (first_number * second_number).round(@len1)
 	  else
       (first_number * second_number).round(@len2)

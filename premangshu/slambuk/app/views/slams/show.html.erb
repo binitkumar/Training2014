@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @slam.email %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @slam.name %>
+</p>
+
+<p>
+  <strong>Passout year:</strong>
+  <%= @slam.passyear %>
+</p>
+
+<%= link_to 'Edit', edit_slam_path(@slam) %> |
+<%= link_to 'Back', slams_path %>
